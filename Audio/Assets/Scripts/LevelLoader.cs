@@ -8,11 +8,18 @@ public class LevelLoader : NetworkBehaviour {
 
     private bool inExitZone;
     public string levelToLoad;
-	PlayerController_TP playerController;
+
+
+	PlayerController_TP playerController2;
+
+	public List<PlayerController_TP> playerControllers;
+
+	private static bool created = false;
 
 	// Use this for initialization
 	void Start () {
-		
+
+
         inExitZone = false;
 
 	}
@@ -22,12 +29,25 @@ public class LevelLoader : NetworkBehaviour {
 		
 	}
 		
+	public void DontDestroyPlz(){
+		
+			if (!created) {
+				
+			foreach (PlayerController_TP playerController in playerControllers) {
+				DontDestroyOnLoad (playerController);
 
 
+			}
+
+			created = true;
+					
+
+		}
+	}
 
     private void OnTriggerEnter(Collider other)
-	{playerController = FindObjectOfType<PlayerController_TP> ();
-		if (playerController.heldItem.activeSelf)
+	{playerController2 = FindObjectOfType<PlayerController_TP> ();
+		if (playerController2.heldItem.activeSelf)
         {
 			Application.LoadLevel (levelToLoad);
 

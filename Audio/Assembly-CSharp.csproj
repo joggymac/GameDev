@@ -76,6 +76,9 @@
      <Compile Include="Assets\Scripts\WanderingAI.cs" />
      <None Include="Assets\_Barking_Dog\Readme_Please.txt" />
      <None Include="Assets\Prefabs\Mouse\Readme.txt" />
+ <Reference Include="Assembly-UnityScript-firstpass">
+ <HintPath>D:/Ben Williams/Project/GameDev/Audio/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -115,10 +118,6 @@
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-UnityScript-firstpass.csproj">
-      <Project>{66FF8D31-BCE4-7457-6472-32C1D705B307}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

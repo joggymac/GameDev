@@ -16,7 +16,7 @@ public class PlayerController_TP : NetworkBehaviour {
     Animator anim;
 	public bool moving = false;
 
-
+	LevelLoader lvlLoader;
 
 
 	public double clock;
@@ -33,6 +33,10 @@ public class PlayerController_TP : NetworkBehaviour {
 		anim.SetBool ("Walking", false);
 		heldItem.SetActive (false);
 		Cursor.visible = false;
+
+		lvlLoader = FindObjectOfType<LevelLoader> ();
+		lvlLoader.playerControllers.Add (this);
+		lvlLoader.DontDestroyPlz ();
 
 	}
 		

@@ -11,7 +11,12 @@ public class LevelManager : NetworkBehaviour {
 	HUD hud;
 	PlayerController_TP playerController;
 
+
+
 	private NetworkStartPosition[] spawnPoints;
+
+
+
 
 	void Start(){
 		hud = FindObjectOfType<HUD> ();
@@ -20,6 +25,10 @@ public class LevelManager : NetworkBehaviour {
 		playerController = FindObjectOfType<PlayerController_TP> ();
 
 	}
+
+
+
+
 
 	void FixedUpdate(){
 			TakeDamage ();

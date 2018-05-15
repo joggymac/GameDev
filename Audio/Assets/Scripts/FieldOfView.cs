@@ -42,6 +42,8 @@ public class FieldOfView : NetworkBehaviour  {
 	public AudioClip detected;
 
 
+
+
 	void Start(){
 
 
@@ -54,6 +56,11 @@ public class FieldOfView : NetworkBehaviour  {
 		footSteps = FindObjectOfType<Footsteps> ();
 
 			
+	}
+
+	void Awake()
+	{
+		
 	}
 
 	void Update(){
